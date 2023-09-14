@@ -1,0 +1,7 @@
+<ng-container *ngFor="let tab of tabDirectives; let index = index">
+  <button (click)="selectTab(tab.templateRef)">{{ tab.name }}</button>
+</ng-container>
+<div class="header">
+  <ng-container *ngIf="selectedTabTemplate" [ngTemplateOutlet]="selectedTabTemplate">
+  </ng-container>
+</div>

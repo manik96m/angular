@@ -18,6 +18,7 @@
   </ng-template>
 
   <!-- Conditional Content Projection - using Directive -->
+  <!-- We can change this to div *cardContent3 as well-->
   <ng-template cardContent3>
     Card Content 3
   </ng-template>
@@ -27,3 +28,16 @@
     Footer
   </ng-container>
 </app-card>
+
+<app-tabs>
+  <!-- Content projection using directive -->
+  <div *tab="'tab1'">
+    This is tab1 content
+  </div>
+  <div *tab="'tab2'">
+    This is tab2 content
+  </div>
+  <div *tab="'tab3'">
+    This is tab3 content
+  </div>
+</app-tabs>
