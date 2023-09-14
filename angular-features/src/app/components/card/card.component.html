@@ -1,0 +1,31 @@
+<div class="header">
+  <div>
+    <!-- Using Directive -->
+    <ng-content select="app-cardheader">
+    </ng-content>
+  </div>
+  
+  <div>
+    <ng-content>
+    </ng-content>
+  </div>
+
+  <div>
+    <!-- Conditional Content Projection - using template reference variable -->
+    <ng-container *ngIf="cardContent2" [ngTemplateOutlet]="cardContent2">
+    </ng-container>
+  </div>
+
+  <div>
+    <!-- Conditional Content Projection - using directive with attribute selector -->
+    <ng-container *ngIf="cardContent3" [ngTemplateOutlet]="cardContent3">
+    </ng-container>
+  </div>
+  
+  <div>
+    <!-- Using attribute selector -->
+    <ng-content select="[footer]">
+    </ng-content>
+  </div>
+  
+</div>

@@ -1,0 +1,29 @@
+<!-- Single Slot content projection -->
+<app-card>
+  Card Content
+</app-card>
+
+<!-- Multi Slot content projection -->
+<app-card>
+  <!-- Using Directive -->
+  <app-cardheader>
+    Header
+  </app-cardheader>
+
+  Card Content
+
+  <!-- Conditional Content Projection - using template reference variable -->
+  <ng-template #cardContent2>
+    Card Content 2
+  </ng-template>
+
+  <!-- Conditional Content Projection - using Directive -->
+  <ng-template cardContent3>
+    Card Content 3
+  </ng-template>
+
+  <!-- Using attribute selector -->
+  <ng-container footer>
+    Footer
+  </ng-container>
+</app-card>
