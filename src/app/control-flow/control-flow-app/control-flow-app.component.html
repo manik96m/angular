@@ -1,0 +1,51 @@
+<div>
+  Control Flow App
+  <div>
+    @if (a > b) {
+      {{ a }} is greater than {{ b }}
+    } @else if (b > a) {
+      {{ a }} is less than {{ b }}
+    } @else {
+      {{ a }} is equal to {{ b }}
+    }
+  </div>
+  <div>
+    @for (item of items; track item.id) {
+      <div>{{ item.name }}</div>
+    }
+  </div>
+
+  <div>
+    @if (true) {
+      <div>Hello this is if block</div>
+    }
+    @if (false) {
+      <div>Hello this is if block</div>
+    } @else {
+      <div>Hello this is else block</div>
+    }
+  </div>
+
+  <div>
+    @for (item of items; track item.id) {
+      <div>Test {{ item.name }}</div>
+    }
+  </div>
+  @for (item of emptyItems; track 1) {
+    <div>Empty item</div>
+  } @empty {
+    <div>No items found</div>
+  }
+
+  @switch (items[0].id) {
+    @case (12) {
+      <div>Case item1</div>
+    }
+    @case (22) {
+      <div>Case item2</div>
+    }
+    @default {
+      <div>Default item</div>
+    }
+  }
+</div>
