@@ -1,2 +1,27 @@
-<app-content-projection>
-</app-content-projection>
+<!-- <app-content-projection> </app-content-projection> -->
+
+<app-tutorial
+  [title]="title"
+  [message]="message"
+  userName="Manik"
+  password="ManikPass"
+  [(twoWay)]="twoWay"
+  (tutorialStart)="tutorialStart()"
+>
+</app-tutorial>
+
+<two-way-binding-app></two-way-binding-app>
+
+<control-flow-app></control-flow-app>
+
+<div style="display: flex; flex-direction: column">
+  <div>{{ title }}</div>
+  <div>{{ message }}</div>
+</div>
+
+<button #buttony (click)="save($event)">Save</button>
+<button class="buttony" (click)="save($event)">Cancel</button>
+
+<app-user-profile></app-user-profile>
+
+<div>{{ "Lorem ipsum" | uppercase }}</div>
